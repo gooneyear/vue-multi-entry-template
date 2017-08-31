@@ -22,31 +22,11 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
-    // Generate multiple entry file settings
-    ...entry_config.HTML_SETTINGS_DEV,
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    // https://github.com/ampedandwired/html-webpack-plugin
-    /*
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      inject: true
-    }),
-    */
-    new HtmlWebpackPlugin({
-      filename: 'main.html',
-      template: './src/main.html',
-      chunks: ['main', 'vendor', 'manifest'],
-      inject: true
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'login.html',
-      template: './src/login.html',
-      chunks: ['login', 'vendor', 'manifest'],
-      inject: true
-    }),
+    // Generate multiple entry file settings
+    ...entry_config.HTML_SETTINGS_DEV,
     new FriendlyErrorsPlugin()
   ]
 })

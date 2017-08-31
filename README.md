@@ -2,6 +2,11 @@
 
 > A multiple entry project
 
+## Usage
+``` bash
+git archive [this-project]
+```
+
 ## Build Setup
 
 ``` bash
