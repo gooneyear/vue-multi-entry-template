@@ -1,5 +1,7 @@
 const entry_points = [
-  'index',
+  'student',
+  'manager',
+  'teacher'
 ];
 
 const commons = ['vendor', 'manifest'];
